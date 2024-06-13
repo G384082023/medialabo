@@ -3,20 +3,20 @@ p{
 }
 h1 {
 	color:white;
-	text-shadow:black 1px 0 10px;
     border: solid;
     border: dashed black;
+    background: linear-gradient(0.25turn,red,blue);
 }
 h2{
     color:blue;
     
 }
 a:link {
-    color: pink;
+    color: green;
   }
   
   a:visited {
-    color: green;
+    color: pink;
   }
   
   a:hover {
