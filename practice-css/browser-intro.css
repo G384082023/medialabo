@@ -1,5 +1,7 @@
 p {
 	color: navy;
+	font-size:small;
+	background-color: #dfdfdf;
 }
 
 p.info {
@@ -13,12 +15,26 @@ h1 {
 h2 {
 	border: solid 1px black;
 	margin: 5px;
+	font-family: cursive;
+	color:#3f3faf;
+	background: linear-gradient(white, #ffefaf); ;
 }
 
 div#zentai {
 	display: flex;
 	flex-direction: row;
 	width: 1024px;
+}
+
+div.zentai {
+    display: flex;                     
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-auto-rows: 200px 200px;        
+    grid-gap: 10px;                     
+    width: 5px;
+}
+div.box {
+    background: cyan;
 }
 
 div#zentai > div {
