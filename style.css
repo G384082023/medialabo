@@ -12,11 +12,11 @@ h2{
     
 }
 a:link {
-    color: green;
+    color: rgb(26, 26, 222);
   }
   
   a:visited {
-    color: pink;
+    color: rgb(255, 0, 98);
   }
   
   a:hover {
