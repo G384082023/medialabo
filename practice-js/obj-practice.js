@@ -14,5 +14,14 @@ let gakka = [
 	{name: "デザイン学科", ename: "Department of Design"}
 ];
 
+console.log(campus.address);
+for(let n1 of campus.buildingD){
+	console.log(n1);
+}
+
+for(let n2 of gakka){
+	console.log(n2.name);
+}
+
 //////////////// ここから下にプログラムを書きたそう!
 
