@@ -33,9 +33,10 @@ function hantei() {
   if(kaisu < 3){
     if(yoso === kotae){
         console.log('正解です．おめでとう!');
-    }else if(yoso < kotae){
-        console.log('まちがい．答えはもっと小さいですよ');
+        kaisu = 4;
     }else if(yoso > kotae){
+        console.log('まちがい．答えはもっと小さいですよ');
+    }else if(yoso < kotae){
         console.log('まちがい．答えはもっと大きいですよ');
     }
   }else if(kaisu === 3){
