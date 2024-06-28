@@ -62,3 +62,44 @@ console.log("風速 : " + data.wind.speed);
 console.log("風向 : " + data.wind.deg);
 
 
+let div = document.querySelector('div#result');     
+let h1 = document.createElement('h1');                
+h1.textContent = '世界の天気';                            
+div.insertAdjacentElement('beforeend', h1);
+
+div.style.textEmphasis ='black';
+
+let div1 = document.querySelector('div#result');     
+let h2 = document.createElement('h2');                
+h2.textContent = '北京市';                            
+div1.insertAdjacentElement('beforeend', h2);
+
+let div2 = document.querySelector('div#result');
+let p1 = document.createElement('p'); 
+let photo1 = document.createElement('img'); 
+photo1.setAttribute('src', 'project-html/Beijing.jpg');
+p1.insertAdjacentElement('beforeend', photo1);
+div2.insertAdjacentElement('beforeend', p1);
+
+
+//<div id="zentai">
+let div3 = document.querySelector('div#result');
+let zentai = document.createElement('div');
+zentai.setAttribute('id', 'zentai1');
+div3.insertAdjacentElement('beforeend', zentai);
+
+
+//<div id="box">
+let div11 = document.querySelector('div#zentai1');  
+let box1 = document.createElement('div');
+box1.setAttribute('id', 'box');
+   
+let h11 = document.createElement('h2');                
+h11.textContent = '経緯度';                            
+div11.insertAdjacentElement('beforeend', h11);
+
+
+
+
+
+

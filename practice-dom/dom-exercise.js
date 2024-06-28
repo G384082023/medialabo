@@ -23,11 +23,11 @@ p.style.textEmphasis ='sesame green';
 
 // 練習4-3 写真表作成プログラム
 let div1 = document.querySelector('div#phototable');
-let p1 = document.createElement('p'); 
-let photo1 = document.createElement('img'); 
-photo1.setAttribute('src', 'taro.png');
-p1.insertAdjacentElement('beforeend', photo1);
-div1.insertAdjacentElement('beforeend', p1);
+let p1 = document.createElement('p'); //p 要素を作成
+let photo1 = document.createElement('img'); //img 要素を作成
+photo1.setAttribute('src', 'taro.png');//img 要素の src 属性を設定
+p1.insertAdjacentElement('beforeend', photo1);//p 要素の中の最後に img 要素を追加
+div1.insertAdjacentElement('beforeend', p1);//div#phototable の中の最後に p 要素を追加
 
 let div2 = document.querySelector('div#phototable');
 let p2 = document.createElement('p'); 
