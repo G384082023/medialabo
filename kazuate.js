@@ -2,11 +2,44 @@ let kotae = Math.floor(Math.random()*10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
 
 let kaisu = 1;
-let yoso;
+let yoso=4;
 
 const button = document.querySelector("button");
 
 button.addEventListener("click", guess);
+
+let span1 = document.querySelector('span#kaisu');
+let p1 = document.createElement('a');
+p1.textContent = kaisu;
+span1.insertAdjacentElement('afterend' , p1);
+
+let span2 = document.querySelector('span#answer');
+let p2 = document.createElement('a');
+p2.textContent = kotae;
+span2.insertAdjacentElement('afterend' , p2);
+
+//let w = document.querySelector('p#result');
+//w.remove();
+
+  if(yoso === kotae){
+    let result = document.querySelector('p#result'); 
+    let a = document.createElement('a');            
+    a.textContent = '正解です．おめでとう!';
+    result.insertAdjacentElement('beforeend', a);
+
+  }else if(yoso > kotae){
+    let result = document.querySelector('p#result'); 
+    let a = document.createElement('a');            
+    a.textContent = 'まちがい．答えはもっと小さいですよ';
+    result.insertAdjacentElement('beforeend', a);
+
+  }else if(yoso < kotae){
+    let result = document.querySelector('p#result'); 
+    let a = document.createElement('a');            
+    a.textContent = 'まちがい．答えはもっと大きいですよ';
+    result.insertAdjacentElement('beforeend', a);
+
+  }
 
 hantei();
 hantei();
@@ -16,6 +49,8 @@ function guess() {
   const name = prompt();
   button.textContent = `回答`;
 }
+
+
 
 // 入力回数（予想回数）
 
