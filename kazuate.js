@@ -18,8 +18,9 @@ let p2 = document.createElement('a');
 p2.textContent = kotae;
 span2.insertAdjacentElement('afterend' , p2);
 
-//let w = document.querySelector('p#result');
+//let w = document.querySelector('p#result > p');
 //w.remove();
+//将来ここに判定結果を表示します
 
   if(yoso === kotae){
     let result = document.querySelector('p#result'); 
