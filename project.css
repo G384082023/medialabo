@@ -1,33 +1,14 @@
 h1 {
     color:white;
 	text-shadow:navy 1px 0 10px;
-    border-bottom: dashed black;
 }
 
-div#zentai {
-	display: grid;
-	grid-template-columns: 1fr 1fr; 
-    grid-auto-rows: 200px 200px;        
-    grid-gap: 10px;                     
-	width: 1024px;
+body {
+	background-image:url(project-html/Beijing0.jpg);
+    background-size: 100%;
 }
 
-div#zentai > div {
-	margin-left: 5px;
-	background-color: rgb(34, 151, 184);
-	padding:5px;
+h2 {
+    color:navy;
 }
 
-img.sign1 {
-    float: right;
-    width: 150px;
-    height: 150px;
-    margin: -50px 30px;
-}
-
-img.sign2 {
-    float: right;
-    width: 150px;
-    height: 150px;
-    margin: -100px 0px;
-}
