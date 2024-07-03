@@ -2,9 +2,9 @@ p{
     font-size:small;
 }
 h1 {
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 5px 5px 5px black;
 	color:white;
-    background: linear-gradient(0.25turn,black,white);
+    background: linear-gradient(0.25turn,rgb(72, 169, 255),blue);
 }
 h2{
     color:blue;
