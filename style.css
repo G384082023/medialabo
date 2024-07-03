@@ -2,15 +2,19 @@ p{
     font-size:small;
 }
 h1 {
+  text-shadow: 1px 1px 2px black;
 	color:white;
-    border: solid;
-    border: dashed black;
-    background: linear-gradient(0.25turn,red,blue);
+    background: linear-gradient(0.25turn,black,white);
 }
 h2{
     color:blue;
     
 }
+
+body {
+    background-color: rgb(72, 169, 255);
+}
+
 a:link {
     color: rgb(26, 26, 222);
   }
