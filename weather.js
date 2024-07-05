@@ -61,7 +61,23 @@ console.log("湿度 : " + data.main.humidity);
 console.log("風速 : " + data.wind.speed);
 console.log("風向 : " + data.wind.deg);
 
+let b = document.querySelector('button#btn');
+b.addEventListener('click', showSelectResult);
 
+function showSelectResult() {
+    let s = document.querySelector('select#select');
+    let idx = s.selectedIndex;  // idx 番目の option が選択された
+
+    let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+    let o = os.item(idx);       // os の idx 番目の要素
+
+    console.log('選択された ' + idx + ' 番目の option の情報:');
+    console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
+    console.log('  textContent='+o.textContent);
+}
+
+//課題4-2: オブジェクトをページ上に表示する!!!
+/*
 let div = document.querySelector('div#result');     
 let h1 = document.createElement('h1');                
 h1.textContent = '世界の天気（検索結果1件）';                            
@@ -118,87 +134,10 @@ let li9 = document.createElement('li');
 li9.textContent =  '風向: 197';
 ul.insertAdjacentElement('beforeend',li9);
 
-div3.insertAdjacentElement('beforeend', ul);  
-
-/*let li2 = document.createElement('li');
-li2.textContent =  '経度: 39.9075';
-let li3 = document.createElement('li');
-li3.textContent =  '経度: 39.9075';
-let li4 = document.createElement('li');
-li4.textContent =  '経度: 39.9075';
-let li5 = document.createElement('li');
-li5.textContent =  '経度: 39.9075';
-let li6 = document.createElement('li');
-li6.textContent =  '経度: 39.9075';
-let li7 = document.createElement('li');
-li7.textContent =  '経度: 39.9075';
-let li8 = document.createElement('li');
-li8.textContent =  '経度: 39.9075';
-let li9 = document.createElement('li');
-li9.textContent =  '経度: 39.9075';
-li1.insertAdjacentElement('afterend', li2);
-li2.insertAdjacentElement('afterend', li3);
-li3.insertAdjacentElement('afterend', li4);  
-li4.insertAdjacentElement('afterend', li5);  
-li5.insertAdjacentElement('afterend', li6);  
-li6.insertAdjacentElement('afterend', li7);  
-li7.insertAdjacentElement('afterend', li8);  
-li8.insertAdjacentElement('afterend', li9);
-ul.insertAdjacentElement('afterend', li8);  
-div3.insertAdjacentElement('afterend', ul);   */    
-
-/*
-let p1 = document.createElement('p'); 
-let photo1 = document.createElement('img'); 
-photo1.setAttribute('src', 'project-html/Beijing.jpg');
-p1.insertAdjacentElement('beforeend', photo1);
-div2.insertAdjacentElement('beforeend', p1);
-
-
-//<div id="zentai">
-let div3 = document.querySelector('div#result');
-let zentai = document.createElement('div');
-zentai.setAttribute('id', 'zentai');
-div3.insertAdjacentElement('beforeend', zentai);
-
-
-//<div id="box"> box1
-let div11 = document.querySelector('div#zentai');  
-let box1 = document.createElement('div');
-box1.setAttribute('id', 'box1');
-let h11 = document.createElement('h2');                
-h11.textContent = '経緯度';
-
-let ul1 = document.createElement('ul');
-let li1 = document.createElement('li');
-li1.textContent =  '緯度: 116.3972';
-let li2 = document.createElement('li');
-li2.textContent =  '経度: 39.9075';
-li1.insertAdjacentElement('beforeend', li2);  
-ul1.insertAdjacentElement('beforeend', li1);  
-h11.insertAdjacentElement('beforeend', ul1);
-box1.insertAdjacentElement('beforeend', h11);
-
-div11.insertAdjacentElement('beforeend', box1);
-
-
-
-//box2
-
-let div12 = document.querySelector('div#box1');  
-let box2 = document.createElement('div');
-box2.setAttribute('id', 'box2');
-let h21 = document.createElement('h2');                
-h21.textContent = '天気';
-
-let b = document.createElement('b');
-b.textContent= '曇りがち';
-
-h21.insertAdjacentElement('beforeend', b);
-box2.insertAdjacentElement('beforeend', h21);
-
-div12.insertAdjacentElement('afterend', box2);
+div3.insertAdjacentElement('beforeend', ul); 
 */
+
+
 
 
 

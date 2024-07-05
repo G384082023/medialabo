@@ -12,3 +12,15 @@ h2 {
     color:navy;
 }
 
+div#form{
+    width: 200px;
+    background-color: rgba(255,255,255, 0.5); /* 半透明灰色背景 */
+    padding: 5px; /* 内边距，确保内容不会贴边 */
+    border-radius: 8px; /* 可选的圆角效果 */
+}
+
+/* こちらがすりガラス効果
+    background-color: rgba(255, 255, 255, 0.5); //半透明白色背景 
+    backdrop-filter: blur(10px); //毛玻璃效果
+    border: 1px solid rgba(255, 255, 255, 0.3); //可选的边框，增加视觉效果 
+*/
