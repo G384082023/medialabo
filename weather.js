@@ -1,4 +1,4 @@
-let data = {
+/*let data = {
   "coord": {
     "lon": 116.3972,
     "lat": 39.9075
@@ -44,10 +44,26 @@ let data = {
   "name": "北京市",
   "cod": 200
 };
+*/
+
 
 ////////// 課題3-2 ここからプログラムを書こう
 
 //print(data);
+let city = [
+  ["360630",'project-html/Cairo.jpg'],
+  ["524901",'project-html/Moscow.jpg'],
+  ["993800",'project-html/Johannesburg.jpg'],
+  ["1816670",'project-html/Beijing.jpg'],
+  ["1850147",'project-html/Tokyo.jpg'],
+  ["1880252",'project-html/Singapore.jpg'],
+  ["2147714",'project-html/Sydney.jpg'],
+  ["2643743",'project-html/London.jpg'],
+  ["2968815",'project-html/Paris.jpg'],
+  ["3451189",'project-html/Rio de Janeiro.jpg'],
+  ["5128581",'project-html/New York.jpg'],
+  ["5368361",'project-html/Los Angeles.jpg'],
+]
 
 function print(data){
   
@@ -85,13 +101,22 @@ function showSelectResult() {
 let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
+var body = document.querySelector('body');
+
+function changeBackground(backgroundUrl) {
+  body.style.backgroundImage = 'url(' + backgroundUrl + ')';
+}
+
 
 // 通信を開始する処理
 function sendRequest() {
     let i = document.querySelector('select[id="select"]');
-    let id = i.value;
+    let n = i.value;
+    let id = city[n][0];
+    console.log("緯度 : " + id);
     // URL を設定
     let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"+id+".json";
+    changeBackground(city[n][1]);
 
     // 通信開始
     axios.get(url)
