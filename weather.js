@@ -47,8 +47,14 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 
+//print(data);
 
-console.log("都市名 : " + data.name);
+function print(data){
+  
+}
+
+
+/*console.log("都市名 : " + data.name);
 console.log("緯度 : " + data.coord.lon);
 console.log("経度 : " + data.coord.lat);
 
@@ -74,6 +80,84 @@ function showSelectResult() {
     console.log('選択された ' + idx + ' 番目の option の情報:');
     console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
     console.log('  textContent='+o.textContent);
+}*/
+
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
+
+
+// 通信を開始する処理
+function sendRequest() {
+    let i = document.querySelector('select[id="select"]');
+    let id = i.value;
+    // URL を設定
+    let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"+id+".json";
+
+    // 通信開始
+    axios.get(url)
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
+}
+
+// 通信が成功した時の処理
+function showResult(resp) {
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+    print(data);
+    console.log("都市名 : " + data.name);
+    let city = document.querySelector('h3#city');
+    city.textContent = data.name;
+
+    console.log("緯度 : " + data.coord.lon);
+    let ido = document.querySelector('li#ido');
+    ido.textContent = "緯度 : " +data.coord.lon;
+    console.log("経度 : " + data.coord.lat);
+    let keido = document.querySelector('li#keido');
+    keido.textContent = "経度 : " +data.coord.lat;
+
+    console.log("天気 : " + data.weather[0].description);
+    let tenki = document.querySelector('li#tenki');
+    tenki.textContent = "天気 : " + data.weather[0].description;
+
+    console.log("最低気温 : " + data.main.temp_min);
+    let saiteikion = document.querySelector('li#saitei');
+    saiteikion.textContent = "最低気温 : " +data.main.temp_min;
+    console.log("最高気温 : " + data.main.temp_max);
+    let saikoukion = document.querySelector('li#saikou');
+    saikoukion.textContent = "最高気温 : " +data.main.temp_max;
+
+    console.log("湿度 : " + data.main.humidity);
+    let shitudo = document.querySelector('li#shitudo');
+    shitudo.textContent = "湿度 : " +data.main.humidity;
+    console.log("風速 : " + data.wind.speed);
+    let fuusoku = document.querySelector('li#fuusoku');
+    fuusoku.textContent = "風速 : " +data.wind.speed;
+    console.log("風向 : " + data.wind.deg);
+    let fuukou = document.querySelector('li#fuukou');
+    fuukou.textContent = "風向 : " +data.wind.deg;
+    
+
+    // data をコンソールに出力
+    console.log(data);
+
+    // data.x を出力
+    console.log(data.x);
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+    console.log(err);
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+    console.log('Ajax 通信が終わりました');
 }
 
 //課題4-2: オブジェクトをページ上に表示する!!!
