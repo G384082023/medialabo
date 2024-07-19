@@ -60,9 +60,9 @@ let city = [
   ["2147714",'project-html/Sydney.jpg'],
   ["2643743",'project-html/London.jpg'],
   ["2968815",'project-html/Paris.jpg'],
-  ["3451189",'project-html/Rio de Janeiro.jpg'],
-  ["5128581",'project-html/New York.jpg'],
-  ["5368361",'project-html/Los Angeles.jpg'],
+  ["3451189",'project-html/RiodeJaneiro.jpg'],
+  ["5128581",'project-html/NewYork.jpg'],
+  ["5368361",'project-html/LosAngeles.jpg'],
 ]
 
 function print(data){
