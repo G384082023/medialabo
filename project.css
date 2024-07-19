@@ -1,6 +1,6 @@
 h1 {
     color:white;
-	text-shadow:navy 1px 0 10px;
+	text-shadow:navy 1px 1px 10px;
 }
 
 body {
@@ -10,6 +10,30 @@ body {
 h2 {
     color:navy;
 }
+
+/*参考文献：chatgpt*/
+@keyframes colorChange {
+    10% { color: rgb(255, 0, 0) }    20% { color: rgb(255, 127, 0); }   
+    30% { color: rgb(255, 255, 0); }   40% { color: rgb(180, 255, 0)}   
+    50% { color: rgb(0, 255, 0) }   60% { color: rgb(0, 255, 255)}   
+    70% { color: rgb(0, 127, 255)}   80% { color: rgb(0, 0, 255)}   
+    90% { color: rgb(127, 0, 255)}   1000% { color: rgb(255, 0, 255)}    
+  }
+  
+  .text-animation {
+    animation: colorChange 30s infinite; /* 20秒循环一次 */
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); /* 添加文字阴影 */
+  }
+
+  .highlight {
+    background: rgba(255, 255, 255, 0.5); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    border-radius: 5px; /* 圆角边框 */
+    padding: 5px 10px; /* 内边距 */
+}
+
+
+
 
 div#form{
     width: 200px;
