@@ -4,8 +4,10 @@ p{
 h1 {
   text-shadow: 5px 5px 5px black;
 	color:white;
-    background: linear-gradient(0.25turn,rgb(72, 169, 255),rgb(245, 245, 220));/*(0.25turn,rgb(72, 169, 255),blue);*/
+    background: linear-gradient(0.25turn,rgb(72, 169, 255),rgb(245, 245, 220));
 }
+/*(0.25turn,rgb(72, 169, 255),blue);*/
+
 h2{
     color:blue;
     
